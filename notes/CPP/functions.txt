@@ -1,0 +1,39 @@
+c = tolower(c);
+s.size();
+s.length()
+
+int maxEle = max_element(v.begin(), v.end())    // vector<int> v
+
+set
+st.eras(num)
+st.insert(num)
+st.find(num) == st.end() // not present in the set
+
+priority_queue
+pq.push()
+pq.pop()  // only pop element not return the element
+pq.top()
+pq.empty()
+
+vector1 == vector2  // check two vector equals
+vector<int> freq1(26), freq2(26);   // The vectors freq1 and freq2 will have 26 elements each, but their values will be indeterminate (essentially garbage values).
+vector<int> freq1(26, 0), freq2(26, 0);  // The vectors freq1 and freq2 will have 26 elements each, all initialized to 0
+ sort(v1.begin(),v1.end());
+
+// bfs implementation
+ queue<pair<int,int>> q;
+ auto [x, y] = q.front();
+vector<vector<int>> directions = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+for (auto& dir : directions) {
+}
+
+q.push({newX, newY});
+
+vis.assign(size, false);
+v.resize(n);
+mp.count(c) //The unordered_map::count function checks if a key exists in the map or not. It will return 1 if the key exists and 0 otherwise.
+unordered_set<int> num_set(v.begin(), v.end());
+
+bool dp[n][n] = {false};
+substr(start index, length of substring) // not the end index
+string substr (size_t pos = 0, size_t len = npos) const;

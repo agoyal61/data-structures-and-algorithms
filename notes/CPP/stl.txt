@@ -1,0 +1,87 @@
+#include <bits/stdc++.h>
+
+Input/Output:
+ios_base::sync_with_stdio(false);: Speeds up I/O operations.
+cin.tie(NULL);: Unties cin from cout for faster I/O.
+
+Data Structures:
+STL Containers: vector, set, map, unordered_set, unordered_map, stack, queue, deque, priority_queue.
+Iterators & Ranges: Useful for quickly traversing containers.
+
+Algorithms:
+sort(): Sorts a collection.
+binary_search(): Performs binary search on a sorted collection.
+lower_bound(), upper_bound(): Returns iterators pointing to positions in a sorted collection.
+next_permutation(): Generates the next lexicographically greater permutation.
+gcd(): Returns the greatest common divisor of two numbers.
+
+String Manipulation:
+string::substr(), string::find(): Useful for substring operations.
+stringstream: For easy string parsing and conversion between types.
+
+Math Functions:
+pow(), sqrt(): Power and square root operations.
+ceil(), floor(): Ceiling and floor functions.
+
+Utility Functions:
+swap(): Swaps two values.
+max(), min(): Returns maximum and minimum of given values.
+distance(): Finds the distance between two iterators.
+
+Bit Manipulation:
+Bitwise operators: &, |, ^, ~, <<, >>
+__builtin_popcount(): Returns the count of set bits.
+
+Others:
+numeric_limits: To get maximum and minimum values for data types.
+Using typedef or using for creating shorter names for complex data types
+
+The C++ Standard Template Library (STL) provides a range of containers that come with a set of useful member and non-member functions. Here's a list of useful functions for some of the most commonly used STL containers:
+		vector:
+push_back(): Adds an element to the end.
+pop_back(): Removes the last element.
+resize(): Resizes the container.
+size(): Returns the number of elements.
+empty(): Checks if the container is empty.
+begin(), end(): Returns iterators.
+rbegin(), rend(): Returns reverse iterators.
+		list:
+push_front(), push_back(): Adds an element to the beginning or end.
+pop_front(), pop_back(): Removes the first or last element.
+insert(): Inserts elements.
+erase(): Erases elements.
+sort(): Sorts the list.
+merge(): Merges two sorted lists.
+reverse(): Reverses the list.
+		set & multiset:
+insert(): Inserts an element.
+erase(): Erases elements by key or iterator.
+find(): Finds an element by key.
+count(): Counts elements with a specific key.
+lower_bound(), upper_bound(): Returns iterators to the boundaries of a key range.
+		map & multimap:
+insert(): Inserts a key-value pair.
+erase(): Erases elements by key or iterator.
+find(): Finds an element by key.
+operator[]: Accesses or modifies the value associated with a key.
+count(): Counts elements with a specific key.
+		stack:
+push(): Adds an element to the top.
+pop(): Removes the top element.
+top(): Accesses the top element.
+empty(): Checks if the stack is empty.
+		queue & priority_queue:
+push(): Adds an element.
+pop(): Removes the front element (or top element in priority_queue).
+front(): Accesses the front element.
+back(): Accesses the back element (not available in priority_queue).
+empty(): Checks if the queue is empty.
+		deque:
+push_front(), push_back(): Adds an element to the front or back.
+pop_front(), pop_back(): Removes the front or back element.
+begin(), end(): Returns iterators.
+size(): Returns the number of elements.
+empty(): Checks if the deque is empty.
+		unordered_set, unordered_map, unordered_multiset, unordered_multimap:
+Similar to their ordered counterparts (set, map, etc.), but based on hash tables. 
+

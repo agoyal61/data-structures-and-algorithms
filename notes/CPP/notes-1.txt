@@ -1,0 +1,32 @@
+INT_MAX
+INT_MIN
+LONG_MAX
+LONG_MIN
+
+// lambda function by reference
+auto f = [&] (int a, int b){
+	return a+b;
+};
+
+// lambda function by value
+auto f = [=] (int a, int b){
+	return a+b;
+};
+
+uint32_t 
+unsigned int     
+int f[26]={0};  // vector<int> f(26,0);
+
+vector<vector<int>> dp(m, vector<int>(n, 1));
+vector<int> dp(n,0);
+
+vector<int>& nums1
+vector<int>& nums2
+ unordered_set<int> setNums1(nums1.begin(), nums1.end());
+
+
+deque<int> q;
+q.push_back(t);
+q.front()
+q.pop_front()
+q.size()
