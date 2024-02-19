@@ -1,0 +1,148 @@
+
+nums = []
+for i, word in enumerate(nums):
+
+enumerate(iterable, start=0) //  iterate over a sequence (such as a list, tuple, or string), start = starting value of the index. The default value is 0
+
+a = float('inf') // positive infinity, there is no int
+b= float('-inf') // negative infinity
+
+sum(nums) // gives sum of nums array
+sum(iterable, start=0)  // n adds up all the values in the iterable and returns the result
+
+
+# Traverse the list from end to start
+for i in range(len(my_list) - 1, -1, -1):
+
+for i in range( - 1, -(len(my_list)+1), -1):
+nums.sort(reverse=True) // sort list in descending order
+nums.sort(key=my_func) // custom sorting list
+
+sorted(iterable, key=None, reverse=False) // sort iterable
+zip(iterable1, iterable2, ...) // combine iterable and returns an iterator of tuples
+sorted_people = sorted(zip(names, heights), key=lambda x: x[1])  // names and heights are list
+result = [person[0] for person in sorted_people]  // list comprehension
+
+all(iterable) //  if all elements of the given iterable are true (or if the iterable is empty
+result = all(num > 0 for num in numbers)
+result = all(char in allowed_set for char in word)
+
+ord(‘A’) // gives unicode of character
+char.isalpha() // check alphanumeric characters
+dp = [defaultdict(int) for _ in range(len(nums))]
+
+// prints a to z in same line
+for char in range(ord('a'), ord('z') + 1):
+    print(chr(char), end=' ')
+
+int(“23”) // string to integer
+ if 10<=two_digit<=26:
+
+defaultdict(list)
+
+result.sort(key=lambda x: x[1], reverse=True)
+
+      # Sort the items list by student_id in ascending order and score in descending order
+        items.sort(key=lambda x: (x[0], -x[1]))
+
+* list.sort(): In-place sorting, modifies the original list, returns None.
+* sorted(iterable): Non-in-place sorting, creates a new sorted list, leaves the original iterable unchanged.
+
+Counter(nums) // count occurences of each element in list nums or iterable
+
+MOD = int(1e9) + 7
+MOD=10**9+7
+
+sorted_string_desc = ''.join(sorted(original_string, reverse=True)) # does not work
+
+sorted_string_desc = ''.join(original_string.sort(reverse=True)) # does work
+
+binary_string = "1101"
+decimal_number = int(binary_string, 2)
+
+float('-inf')
+
+counts = collections.Counter(s) // returns dictionary object
+
+   max_heap = [-pile for pile in piles]  # Use max heap by negating values
+        heapq.heapify(max_heap)  # Convert the list into a heap in-place
+
+@lru_cache(None)  // from functools import lru_cache
+def dp():
+
+@cache
+def dp():
+
+
+indices = deque(range(n))
+
+    def findSecondMinimumValue(self, root: Optional[TreeNode]) -> int:
+        first=root.val
+        second=float('inf')
+        def pre(node):
+            nonlocal first
+            nonlocal second
+
+ math.gcd(num1, num2)
+ math.gcd(*numbers) // GCD of a list of numbers
+
+row_strengths = [(sum(row), i) for i, row in enumerate(mat)]
+
+bin(num) // gives binary string for number num
+f"{h}:{m:02d}"
+
+
+// bisect module
+bisect_right(list, num) // returns the insertion point after the existing entries of the element in the list
+bisect_left(list, num) // returns the insertion point before the existing entries of the element in the list
+
+
+queue-python
+
+// using queue module, more efficient than list module
+import queue
+my_queue = queue.Queue()
+my_queue.put(1)
+element1 = my_queue.get()
+queue_size = my_queue.qsize()
+fixed_size_queue = queue.Queue(maxsize=3)
+
+
+// using list which is less efficient
+my_queue = []
+my_queue.append(1)
+element1 = my_queue.pop(0)
+
+
+// deque
+from collections import deque
+
+self.queue = deque()
+len(self.queue) // queue size
+
+removed_val = self.queue.popleft()  // pop from left
+
+ self.queue.append(val) // add value to deque right
+Adding Elements:
+* append(x): Adds element x to the right end.
+* appendleft(x): Adds element x to the left end.	•	Removing Elements:
+* pop(): Removes and returns the rightmost element.
+* popleft(): Removes and returns the leftmost element
+
+
+graph-implementation-python
+
+        graph=defaultdict(list) // using default dict
+        for edge in edges:
+            graph[edge[0]].append(edge[1])
+            graph[edge[1]].append(edge[0])
+        queue=deque([source])
+        vis=set()
+        while queue:
+
+priority_queue
+
+* heapq.heappush(heap, item) is used to push an element onto the priority queue.
+* heapq.heappop(heap) is used to pop and return the smallest element from the priority queue.
+
+//  min-heap (which is what heapq creates), the smallest element is at the front of the queue
