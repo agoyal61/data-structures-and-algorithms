@@ -2,7 +2,8 @@ import heapq
 from typing import List
 
 # Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, edges networks.
-# edges = [u,v,weight]
+# edges = [u,v,wt]
+# Time complexity: O(ElogV)
 
 def minCost(n: int, edges:  List[List[int]]):
     graph = {i: [] for i in range(1, n+1)}
@@ -11,19 +12,19 @@ def minCost(n: int, edges:  List[List[int]]):
         graph[edges[1]].append((edges[0], edges[2]))
 
     def dijkstra(start):
-        distances = {city: float('inf') for city in graph}
-        distances[start] = 0
-        queue = [(0, start)]
+        dist = {city: float('inf') for city in graph}
+        dist[start] = 0
+        q = [(0, start)]
 
-        while queue:
-            current_distance, current_city = heapq.heappop(queue)
-            if current_distance > distances[current_city]:
+        while q:
+            curr_dist, curr_city = heapq.heappop(q)
+            if curr_dist > dist[curr_city]:
                 continue
 
-            for neighbor, weight in graph[current_city]:
-                distance = current_distance + weight
-                if distance < distances[neighbor]:
-                    distances[neighbor] = distance
-                    heapq.heappush(queue, (distance, neighbor))
+            for nbr, wt in graph[curr_city]:
+                d = curr_dist + wt
+                if d < dist[nbr]:
+                    dist[nbr] = d
+                    heapq.heappush(q, (d, nbr))
         
-        return distances
+        return dist
