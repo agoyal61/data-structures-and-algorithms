@@ -2,6 +2,7 @@ from collections import deque
 
 def bfs(g,start):
     vis=set()
+    # visited = [False] * (max(self.graph) + 1)
     q=deque([start])
     vis.add(start)
     while q:
