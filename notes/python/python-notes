@@ -146,3 +146,7 @@ priority_queue
 * heapq.heappop(heap) is used to pop and return the smallest element from the priority queue.
 
 //  min-heap (which is what heapq creates), the smallest element is at the front of the queue
+
+# it creates a new list that is the reversed version of arr. #  slicing syntax: arr[start:stop:step]
+arr[::-1] #reverse the array or string
+        
