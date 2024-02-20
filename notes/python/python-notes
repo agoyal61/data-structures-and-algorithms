@@ -150,3 +150,6 @@ priority_queue
 # it creates a new list that is the reversed version of arr. #  slicing syntax: arr[start:stop:step]
 arr[::-1] #reverse the array or string
         
+st.isalpha() // check if string is alphabet
+
+str.split(" ",maxsplit=1) // split string into 2 parts
