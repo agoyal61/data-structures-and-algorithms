@@ -1,0 +1,70 @@
+// Vector (Dynamic Array)
+
+push_back(value): Inserts a new element at the end.
+pop_back(): Removes the last element.
+size(): Returns the number of elements.
+clear(): Removes all elements.
+begin()/end(): Return iterators to the beginning/end.
+resize(new_size): Resizes the vector to contain new_size elements.
+empty(): Checks if the vector is empty.
+
+//List (Doubly Linked List)
+
+push_front(value) / push_back(value): Inserts elements at the front/back.
+pop_front() / pop_back(): Removes the first/last element.
+size(): Returns the number of elements.
+clear(): Removes all elements.
+begin()/end(): Return iterators to the beginning/end.
+sort(): Sorts the list.
+
+// Map (Balanced Binary Tree)
+
+insert(make_pair(key, value)): Inserts a key-value pair.
+erase(key): Removes the element with the specified key.
+find(key): Returns an iterator to the element with the specified key.
+size(): Returns the number of elements.
+clear(): Removes all elements.
+empty(): Checks if the map is empty.
+
+// Set (Balanced Binary Tree)
+
+insert(value): Inserts a value.
+erase(value): Removes the element with the specified value.
+find(value): Returns an iterator to the element with the specified value.
+size(): Returns the number of elements.
+clear(): Removes all elements.
+empty(): Checks if the set is empty.
+
+// Queue
+
+push(value): Adds a value to the end.
+pop(): Removes the first element.
+front(): Accesses the first element.
+size(): Returns the number of elements.
+empty(): Checks if the queue is empty.
+
+//Stack
+
+push(value): Adds a value on top.
+pop(): Removes the top element.
+top(): Accesses the top element.
+size(): Returns the number of elements.
+empty(): Checks if the stack is empty.
+
+//Priority Queue
+
+push(value): Inserts a value.
+pop(): Removes the top (largest) element.
+top(): Accesses the top (largest) element.
+size(): Returns the number of elements.
+empty(): Checks if the priority queue is empty.
+
+// Algorithms
+
+sort(startIterator, endIterator): Sorts the elements.
+reverse(startIterator, endIterator): Reverses the elements.
+find(startIterator, endIterator, value): Finds the first occurrence of value.
+accumulate(startIterator, endIterator, initialValue): Calculates the sum of elements, starting with initialValue.
+count(startIterator, endIterator, value): Counts elements equal to value.
+lower_bound(startIterator, endIterator, value): Returns an iterator to the first element not less than value.
+upper_bound(startIterator, endIterator, value): Returns an iterator to the first element greater than value.
