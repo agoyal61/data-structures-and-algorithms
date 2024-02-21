@@ -1,0 +1,70 @@
+# List
+
+append(x): Adds x to the end.
+extend(iterable): Adds all elements of iterable to the end.
+pop([i]): Removes and returns the element at i.
+remove(x): Removes the first occurrence of x.
+sort(): Sorts the list in place.
+
+insert(i, x): Inserts an item x at a given position i.
+clear(): Removes all items from the list.
+index(x[, start[, end]]): Returns the index of the first item whose value is x.
+count(x): Returns the number of times x appears in the list.
+sort(key=None, reverse=False): Sorts the items of the list in place.
+reverse(): Reverses the elements of the list in place.
+copy(): Returns a shallow copy of the list.
+
+# Tuple
+# Tuples are immutable, so they don't have methods like lists for adding or removing elements, but they do have:
+
+count(x): Returns the number of times x appears in the tuple.
+index(x[, start[, end]]): Returns the index of the first item whose value is x.
+
+#Dict
+
+get(key, default=None): Returns the value for key if key is in the dictionary, else default.
+keys(): Returns a view of the dictionary's keys.
+values(): Returns a view of the dictionary's values.
+items(): Returns a view of the dictionary's (key, value) pairs.
+pop(key[, default]): Removes key and returns its value.
+
+# Set
+
+add(elem): Adds elem to the set.
+remove(elem): Removes elem from the set; raises KeyError if not present.
+discard(elem): Removes elem from the set if present.
+pop(): Removes and returns an arbitrary set element.
+
+# String
+
+find(sub): Returns the lowest index of sub in the string.
+replace(old, new[, count]): Replaces occurrences of old with new.
+split(sep=None, maxsplit=-1): Returns a list of the words in the string.
+strip([chars]): Returns a copy with leading and trailing characters removed.
+join(iterable): Joins the elements of iterable into a single string.
+
+
+# deque
+
+append(x): Add x to the right side.
+appendleft(x): Add x to the left side.
+pop(): Remove and return an element from the right side.
+popleft(): Remove and return an element from the left side.
+extend(iterable): Extend the right side with elements from the iterable.
+rotate(n): Rotate the deque n steps to the right.
+
+# heapq
+
+heappush(heap, elem): Push the value elem onto the heap.
+heappop(heap): Pop and return the smallest item from the heap.
+heapify(x): Transform list x into a heap.
+nlargest(n, iterable): Return a list with the n largest elements from iterable.
+nsmallest(n, iterable): Return a list with the n smallest elements from iterable.
+
+# Queue
+
+put(item): Puts item into the queue.
+get(): Removes and returns an item from the queue. If the queue is empty, it waits until an item is available.
+qsize(): Returns the number of items in the queue.
+empty(): Returns True if the queue is empty, False otherwise.
+full(): Returns True if the queue is full, False otherwise.
