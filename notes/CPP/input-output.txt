@@ -1,6 +1,20 @@
 string line;
 getline(cin, line);
 
+// cpp code compile
+g++ -std=c++17 example.cpp -o example // c++ compiler // works for MAC M1
+g++ -Wall -std=c++17 example.cpp -o example // -Wall enables warning message
+clang++ -std=c++17 example.cpp -o example
+clang++ -Wall -std=c++17 example.cpp -o example
+
+// c code compiler
+gcc source.c -o output
+clang program.c -o program
+clang -Wall program.c -o program
+
+// you can use clang for C code and clang++ for C++ code, much like you would use gcc for C and g++ for C++.
+
+// Time Complexity for competitive programming
 
 MAX value of N                       Time complexity
    10^9                              O(logN) or Sqrt(N)
