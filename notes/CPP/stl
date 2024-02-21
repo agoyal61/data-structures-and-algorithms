@@ -1,6 +1,7 @@
+
 #include <bits/stdc++.h>
 
-Input/Output:
+// Input/Output:
 ios_base::sync_with_stdio(false);: Speeds up I/O operations.
 cin.tie(NULL);: Unties cin from cout for faster I/O.
 

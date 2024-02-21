@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+
+vector<pair<int,double>> cars;
+
+sort(cars.begin(),cars.end(),greater<int>());  // wrong The greater<int>() comparator is intended for sorting integers in descending order, but it won't work correctly for sorting pairs based on their second element.
+
+// use lambda function
+sort(cars.begin(), cars.end(), [](const pair<int, double>& a, const pair<int, double>& b) {
+    return a.second > b.second;
+});
+
+// use rbegin() 
+  sort(cars.rbegin(), cars.rend());
