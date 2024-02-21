@@ -3,8 +3,8 @@ int array2D[3][4]
 vector<int> vec1D
 vector<vector<int>> vec2D
 
- int arr[10];
- memset(arr, -1, sizeof(arr));
+int arr[10];
+memset(arr, -1, sizeof(arr));
 
 vector<int> vec(10);  // Create a vector of size 10
 

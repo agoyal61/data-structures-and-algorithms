@@ -1,0 +1,11 @@
+class and objects
+
+MyStruct myObj = MyStruct(); // This line declares an object myObj of type MyStruct and initializes it by explicitly calling the default constructor
+It's equivalent to the following declarations:
+
+MyStruct myObj; // default constructor is called implicitly if it exists
+
+MyStruct* myObj = new MyStruct(); // myObj is now a pointer to a new MyStruct object
+
+// In C++, new is used for dynamic allocation of objects, and it returns a pointer to the allocated memory. So if you use new, you should handle the object through a pointer, not a regular object of the class/struct type.
+// In this case, myObj is a pointer to a MyStruct object that has been dynamically allocated on the heap. You would access members of the MyStruct object using the -> operator instead of the . operator.

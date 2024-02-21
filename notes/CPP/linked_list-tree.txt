@@ -8,6 +8,7 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
 ListNode* head;
 head->val;
 head->next;
@@ -35,3 +36,31 @@ if (head) // In the context of pointers, a pointer that is not nullptr (i.e., it
 
 ListNode *slow=head,*fast=head,*prev=nullptr; // correct way if multiple declarations
 ListNode* slow=head, fast=head,prev=nullptr; // throws error
+
+Stack Allocation (Without new):
+ ListNode dummy(0); // Dummy node acts as a placeholder to the real head.
+ ListNode *tail = &dummy;
+
+Heap Allocation (With new):
+ListNode* dummy = new ListNode(0);  // 'dummy' is a pointer to a new ListNode object.
+ListNode* tail = dummy;  // 'tail' is set to point to the same ListNode as 'dummy'.
+
+In stack allocation, you don't have to worry about freeing the memory allocated for dummy since it's automatic (not dynamically allocated). It's limited by the scope of the function it's in.
+
+In heap allocation, you are responsible for the memory you've allocated with new, meaning you should eventually free it with delete to avoid a memory leak. This memory is not bound to the function scope and stays allocated until explicitly freed or the program ends
+
+/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+*/
