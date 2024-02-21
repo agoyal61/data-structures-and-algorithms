@@ -13,12 +13,14 @@ sum(iterable, start=0)  // n adds up all the values in the iterable and returns 
 
 # Traverse the list from end to start
 for i in range(len(my_list) - 1, -1, -1):
-
 for i in range( - 1, -(len(my_list)+1), -1):
+
+# sort list
 nums.sort(reverse=True) // sort list in descending order
 nums.sort(key=my_func) // custom sorting list
 
-sorted(iterable, key=None, reverse=False) // sort iterable
+sorted(iterable, key=None, reverse=False) // sort iterable and return a new list
+
 zip(iterable1, iterable2, ...) // combine iterable and returns an iterator of tuples
 sorted_people = sorted(zip(names, heights), key=lambda x: x[1])  // names and heights are list
 result = [person[0] for person in sorted_people]  // list comprehension
@@ -42,8 +44,8 @@ defaultdict(list)
 
 result.sort(key=lambda x: x[1], reverse=True)
 
-      # Sort the items list by student_id in ascending order and score in descending order
-        items.sort(key=lambda x: (x[0], -x[1]))
+# Sort the items list by student_id in ascending order and score in descending order
+items.sort(key=lambda x: (x[0], -x[1]))
 
 * list.sort(): In-place sorting, modifies the original list, returns None.
 * sorted(iterable): Non-in-place sorting, creates a new sorted list, leaves the original iterable unchanged.
@@ -60,12 +62,11 @@ sorted_string_desc = ''.join(original_string.sort(reverse=True)) # does work
 binary_string = "1101"
 decimal_number = int(binary_string, 2)
 
-float('-inf')
-
 counts = collections.Counter(s) // returns dictionary object
 
-   max_heap = [-pile for pile in piles]  # Use max heap by negating values
-        heapq.heapify(max_heap)  # Convert the list into a heap in-place
+# max heap
+max_heap = [-pile for pile in piles]  # Use max heap by negating values
+heapq.heapify(max_heap)  # Convert the list into a heap in-place
 
 @lru_cache(None)  // from functools import lru_cache
 def dp():
@@ -83,6 +84,7 @@ indices = deque(range(n))
             nonlocal first
             nonlocal second
 
+# gcd of numbers
  math.gcd(num1, num2)
  math.gcd(*numbers) // GCD of a list of numbers
 
@@ -97,9 +99,8 @@ bisect_right(list, num) // returns the insertion point after the existing entrie
 bisect_left(list, num) // returns the insertion point before the existing entries of the element in the list
 
 
-queue-python
-
-// using queue module, more efficient than list module
+# queue-python
+# using queue module, more efficient than list module
 import queue
 my_queue = queue.Queue()
 my_queue.put(1)
@@ -108,13 +109,13 @@ queue_size = my_queue.qsize()
 fixed_size_queue = queue.Queue(maxsize=3)
 
 
-// using list which is less efficient
+# using list which is less efficient
 my_queue = []
 my_queue.append(1)
 element1 = my_queue.pop(0)
 
 
-// deque
+# deque
 from collections import deque
 
 self.queue = deque()
@@ -122,7 +123,7 @@ len(self.queue) // queue size
 
 removed_val = self.queue.popleft()  // pop from left
 
- self.queue.append(val) // add value to deque right
+self.queue.append(val) // add value to deque right
 Adding Elements:
 * append(x): Adds element x to the right end.
 * appendleft(x): Adds element x to the left end.	•	Removing Elements:
@@ -130,26 +131,30 @@ Adding Elements:
 * popleft(): Removes and returns the leftmost element
 
 
-graph-implementation-python
+# graph-implementation-python
 
-        graph=defaultdict(list) // using default dict
-        for edge in edges:
-            graph[edge[0]].append(edge[1])
-            graph[edge[1]].append(edge[0])
-        queue=deque([source])
-        vis=set()
-        while queue:
+graph=defaultdict(list) // using default dict for adjacency list
+for edge in edges:
+    graph[edge[0]].append(edge[1])
+    graph[edge[1]].append(edge[0])
+queue=deque([source])
+vis=set()
+while queue:
 
-priority_queue
+# priority_queue
 
 * heapq.heappush(heap, item) is used to push an element onto the priority queue.
 * heapq.heappop(heap) is used to pop and return the smallest element from the priority queue.
 
-//  min-heap (which is what heapq creates), the smallest element is at the front of the queue
+# min-heap (which is what heapq creates), the smallest element is at the front of the queue
 
 # it creates a new list that is the reversed version of arr. #  slicing syntax: arr[start:stop:step]
 arr[::-1] #reverse the array or string
         
-st.isalpha() // check if string is alphabet
+st.isalpha() # check if string is alphabet
 
-str.split(" ",maxsplit=1) // split string into 2 parts
+str.split(" ",maxsplit=1) # split string into 2 parts
+
+math.isclose(a, b, rel_tol=1e-9, abs_tol=0.0) // check if two floating point numbers a,b are close
+
+1e-9 stands for 1 * 10^-9 = 0.000000001
