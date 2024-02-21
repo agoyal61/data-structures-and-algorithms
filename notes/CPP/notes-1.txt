@@ -22,7 +22,7 @@ vector<int> dp(n,0);
 
 vector<int>& nums1
 vector<int>& nums2
- unordered_set<int> setNums1(nums1.begin(), nums1.end());
+unordered_set<int> setNums1(nums1.begin(), nums1.end());
 
 
 deque<int> q;
@@ -30,3 +30,144 @@ q.push_back(t);
 q.front()
 q.pop_front()
 q.size()
+
+#define ll long long
+ hi = 1e9; 3e9
+1LL
+reverse(vec.begin(), vec.end());
+int tab[2000][2000];  // global variable tab , memo, dp
+memset(tab, -1, sizeof(tab));
+vector<vector<int>> v(n+1, vector<int> (s+1));
+vector<vector<bool>> dp(n + 1, vector<bool>(sum + 1, false));
+
+const int MAX_N = ...; // some constant value
+const int MAX_S = ...; // some constant value
+int dp[MAX_N+1][MAX_S+1];
+array<int, 2>
+array<int, 2> cur = {};
+accumulate(dp.begin()+k,dp.end(),0.0);
+ long long ans = LLONG_MIN;
+__gcd(dx, dy);
+
+ for (auto& [x, y] : mp) {} // map traversal
+vec.back() // last elelment
+vec.pop_back() // pop last element
+vec.insert(vec.begin(), ele) // insert at begining
+int minPos = min_element(nums.begin(), nums.end()) - nums.begin();  // position
+unsigned long long
+const int MOD=1e9+7;
+rand()  = 0 and RAND_MAX  32767
+to_string(num)
+deq.empty()
+deq.front()
+deq.back()
+deq.pop_front()
+deq.pop_back()
+deq.push_back()
+upper_bound(v.begin(), v.end(), 4, lambda_optional);  // next greater element // returns pointer  // lambda for custom comparator
+lower_bound(v.begin(), v.end(), 4);  // element not less than given element i.e. equal or greater element of given value
+next(it, 2); // next next element pointer
+prev(it); // returns previous element pointer
+auto 
+emplace_back(num) //The key benefit and purpose of emplace_back over methods like push_back is that it constructs the element in-place at the end of the container, avoiding the need to create a temporary object and then move or copy that object into the container. Instead, emplace_back constructs the object directly within the container, which can be more efficient.
+// used for vector,list,dequeue // It is used to add a new element to the end of the container
+unordered_map<string,vector<pair<int,string>>> m; 
+m[key].emplace_back(timestamp,value);   m[key].emplace_back({timestamp,value}); (wrong)
+auto it = m.find(key);
+str.compare(0, prefix.length(), prefix) == 0. If the condition is true, it means that str starts with prefix.
+
+ // Find the position of the first 'o' character
+  size_t position = str.find('o');      if (position != std::string::npos) { }
+  auto it = find(vec.begin(), vec.end(), 3);  if (it != vec.end()) { }
+
+ for (char c = 'a'; c <= 'z'; c++) // loop character
+ unordered_map<int,unordered_map<int,int>> m;  // m[x][y]++;
+
+vector<vector<int>> res;  // return {};
+deque<int> dq;
+res.push_back(vector<int>(dq.begin(),dq.end()));
+void inorder(TreeNode* root, TreeNode*& prev, int& diff){}   //prev passed by reference
+
+// split string
+string data
+vector<string> str;
+istringstream iss(data);      
+string item;       
+ while(getline(iss,item,' ')){
+            str.push_back(item);
+  }
+       
+ 
+// lambda function       
+function<void(int)> demo_func = [&](int n) {
+};
+
+demo_func(10);
+
+// sort vector in descending order of 2nd parameter of pair
+ sort(v.begin(), v.rend(), [](const pair<int, int> &a, const pair<int, int> &b) {
+            return a.second < b.second;
+  });
+
+// this declaration creates a priority_queue that stores pairs of integers, uses a vector to hold these pairs, and orders them using the comparator comp, which orders elements based on the second element of the pairs (the timestamps) in descending orde
+
+  // Custom comparator for the priority queue to sort tweets by time
+    auto comp = [](const pair<int, int>& a, const pair<int, int>& b) {
+        return a.second < b.second;  // max priority queue bcoz 2nd element is greater
+    };
+    // Define a priority queue with the custom comparator
+    priority_queue<pair<int,int>, vector<pair<int,int>>, decltype(comp)> pq(comp);
+
+
+ // Define a min-heap with a lambda function as the custom comparator.
+        auto comp = [](const string& a, const string& b) {
+            if (a.length() == b.length()) return a > b; // If same length, compare as usual.
+            return a.length() > b.length(); // Longer strings are larger numbers.
+        };
+        priority_queue<string, vector<string>, decltype(comp)> minHeap(comp);
+
+
+vector<pair<int, pair<int, int>>> pairedTasks;
+ sort(pairedTasks.begin(), pairedTasks.end());
+
+make_pair(1,2);
+      vector<pair<int,pair<int,int>>> taskpair;
+       for(int i=0;i<n;i++){
+           taskpair.emplace_back(tasks[i][0],make_pair(tasks[i][1],i));
+       }
+
+priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(busyComp)> busyServers(busyComp);
+busyServers.emplace(1,2);  // use emplace for pair
+
+
+vector<vector<int>>& pairs
+sort(pairs.begin(), pairs.end(), [](const vector<int>& a, const vector<int>& b) {
+            return a[1] < b[1];
+   });
+
+vec1==vec2  //check if two vector equals
+string(n, '.')
+on the same lower diagonal have the property that their row index plus their column index is constant, i.e., r + c is the same. for an n x n grid, the indexing for the lower diagonals would range from 0 to 2n-2.
+all cells (r, c) on the same upper diagonal have the property that their row index minus their column index is constant, i.e., r - c is the same.
+upperDiagonal(2 * n - 1), lowerDiagonal(2 * n - 1)
+
+string& current; current.push_back(letter); current.pop_back();
+stoll(pos,len)
+stoull(pos,len)
+
+getline(cin/stringstream/filestream, string var, delimeter character)
+
+
+str.back()
+str.push_back()
+str.pop_back()
+str.empty()
+size_t nonZeroIndex = st.find_first_not_of('0');
+ if (nonZeroIndex == string::npos) {
+          
+ }
+str.substr(10)
+
+
+ long long ldividend = labs(dividend);
+isdigit(s[i])

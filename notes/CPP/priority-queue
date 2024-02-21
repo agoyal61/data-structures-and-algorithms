@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+
+priority_queue<pair<int,int>, vector<pair<int,int>>, function<bool(pair<int,int>, pair<int,int>)>> pq(
+    [](pair<int,int> a, pair<int,int> b) {
+        return a.first + a.second < b.first + b.second;
+    }
+);
+
+struct Compare {
+    bool operator()(pair<int,int> a, pair<int,int> b) {
+        return a.first + a.second < b.first + b.second;
+    }
+};
+
+priority_queue<pair<int,int>, vector<pair<int,int>>, Compare> pq; // min heap
+
+// Custom comparator for the min-heap
+auto comp = [&nums1, &nums2](const pair<int, int>& a, const pair<int, int>& b) {
+    return nums1[a.first] + nums2[a.second] > nums1[b.first] + nums2[b.second];
+};
+        
+// Min-heap
+priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> minHeap(comp);
