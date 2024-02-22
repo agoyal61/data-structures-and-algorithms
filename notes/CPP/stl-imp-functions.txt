@@ -68,3 +68,34 @@ accumulate(startIterator, endIterator, initialValue): Calculates the sum of elem
 count(startIterator, endIterator, value): Counts elements equal to value.
 lower_bound(startIterator, endIterator, value): Returns an iterator to the first element not less than value.
 upper_bound(startIterator, endIterator, value): Returns an iterator to the first element greater than value.
+
+
+// string
+
+// Basic Operations
+
+size() / length(): Returns the number of characters in the string.
+empty(): Checks if the string is empty.
+clear(): Clears the contents, making it an empty string.
+append(const string& str): Appends the string str to the current string.
+substr(size_t pos = 0, size_t len = npos): Returns a substring starting at position pos.
+
+// Element Access
+
+operator[](size_t pos): Accesses the character at position pos.
+at(size_t pos): Accesses the character at position pos with bounds checking.
+
+// Modifying
+
+erase(size_t pos = 0, size_t len = npos): Erases a part of the string.
+insert(size_t pos, const string& str): Inserts str at position pos.
+replace(size_t pos, size_t len, const string& str): Replaces a part of the string with str.
+
+//Searching
+
+find(const string& str, size_t pos = 0): Finds the first occurrence of str starting from pos.
+rfind(const string& str, size_t pos = npos): Finds the last occurrence of str.
+
+// Comparison
+
+compare(const string& str): Compares the string with str
