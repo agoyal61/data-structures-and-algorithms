@@ -1,0 +1,139 @@
+
+vector<int> vec = {1, 2, 3, 4, 5};
+
+// Range-based for Loop (C++11 and later)
+
+for (int value : vec) {
+    // Use value
+}
+
+// Using Iterators
+
+for (auto it = vec.begin(); it != vec.end(); ++it) {
+    // Use *it
+}
+
+// Using for_each Algorithm
+
+for_each(vec.begin(), vec.end(), [](int value) {
+    // Use value
+});
+
+// Using Indexes for Random Access Containers
+
+for (size_t i = 0; i < vec.size(); ++i) {
+    // Use vec[i]
+}
+
+
+// Special Cases for Associative Containers
+
+For associative containers (std::set, std::map, std::unordered_set, std::unordered_map), the elements are key-value pairs (except in sets). 
+You can use iterators or range-based for loops, keeping in mind that elements are pairs:
+
+// map, unordered_map
+
+map<char, int> m = {{'a', 1}, {'b', 2}};
+for (const auto& pair : m) {
+    char key = pair.first;
+    int value = pair.second;
+    // Use key and value
+}
+
+// set, unordered_set
+
+unordered_set<int> us = {5, 2, 8, 9, 1};
+
+// Using range-based for loop
+for (int elem : us) {
+    cout << elem << " ";  // The order of elements is not guaranteed
+}
+
+// Using iterators
+for (auto it = us.begin(); it != us.end(); ++it) {
+    cout << *it << " ";  // The order of elements is not guaranteed
+}
+
+// stack
+
+stack<int> s;
+// Adding elements to the stack
+s.push(1);
+s.push(2);
+
+// Temporary stack to hold elements for traversal
+stack<int> temp;
+
+// Pop elements from the original stack and print them
+while (!s.empty()) {
+    int topElement = s.top();
+    s.pop();
+    cout << topElement << " ";
+
+    // Push the element into the temporary stack to preserve it
+    temp.push(topElement);
+}
+
+
+ // queue 
+
+queue<int> q;
+// Adding elements to the queue
+q.push(1);
+q.push(2);
+
+// Temporary queue to hold elements for traversal
+queue<int> temp;
+
+// Pop elements from the original queue and print them
+while (!q.empty()) {
+    int frontElement = q.front();
+    q.pop();
+    cout << frontElement << " ";
+
+    // Enqueue the element into the temporary queue to preserve it
+    temp.push(frontElement);
+}
+   
+// priorit_queue
+
+priority_queue<int> pq;
+// Adding elements
+pq.push(3);
+pq.push(1);
+pq.push(4);
+
+// Temporary container to hold elements for traversal
+vector<int> temp;
+
+// Pop elements from the priority_queue and print them
+while (!pq.empty()) {
+    int topElement = pq.top();
+    pq.pop();
+    cout << topElement << " ";
+
+    // Store the element in the temporary container to restore later
+    temp.push_back(topElement);
+}
+ 
+// deque
+
+deque<int> d = {1, 2, 3, 4, 5};
+
+// Using range-based for loop
+for (int elem : d) {
+    cout << elem << " ";
+}
+cout << endl;
+
+// Using iterators
+for (auto it = d.begin(); it != d.end(); ++it) {
+    cout << *it << " ";
+}
+cout << endl;
+
+// Using index-based access
+for (size_t i = 0; i < d.size(); ++i) {
+    cout << d[i] << " ";
+}
+

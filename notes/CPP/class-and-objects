@@ -1,8 +1,8 @@
 class and objects
 
 MyStruct myObj = MyStruct(); // This line declares an object myObj of type MyStruct and initializes it by explicitly calling the default constructor
-It's equivalent to the following declarations:
 
+It's equivalent to the following declarations:
 MyStruct myObj; // default constructor is called implicitly if it exists
 
 MyStruct* myObj = new MyStruct(); // myObj is now a pointer to a new MyStruct object
