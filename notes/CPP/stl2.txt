@@ -7,34 +7,34 @@ sort(arr, arr + n, compareByAge);
 
 // Using range-based for loop (recommended for simple traversal)
     for(const int &val : vec) {
-        std::cout << val << " ";
+        cout << val << " ";
     }
 
     // Using iterators
     for(auto it = vec.begin(); it != vec.end(); ++it) {
-        std::cout << *it << " ";
+        cout << *it << " ";
     }
 
 // map
 
     // Using range-based for loop
     for(const auto &pair : m) {
-        std::cout << pair.first << ": " << pair.second << "\n";
+        cout << pair.first << ": " << pair.second << "\n";
     }
 
     // Using iterators
     for(auto it = m.begin(); it != m.end(); ++it) {
-        std::cout << it->first << ": " << it->second << "\n";
+        cout << it->first << ": " << it->second << "\n";
     }
 
 // search in container
 // vector
-auto it = std::find(vec.begin(), vec.end(), target);
+auto it = find(vec.begin(), vec.end(), target);
 
     if (it != vec.end()) {
-        std::cout << "Found " << target << " at index " << std::distance(vec.begin(), it) << "\n";
+        cout << "Found " << target << " at index " << distance(vec.begin(), it) << "\n";
     } else {
-        std::cout << target << " not found in the vector.\n";
+        cout << target << " not found in the vector.\n";
  }
 
 // set
@@ -42,16 +42,16 @@ auto it = std::find(vec.begin(), vec.end(), target);
     auto it = s.find(target);
 
     if (it != s.end()) {
-        std::cout << "Found " << target << "\n";
+        cout << "Found " << target << "\n";
     } else {
-        std::cout << target << " not found in the set.\n";
+        cout << target << " not found in the set.\n";
     }
 
 // map
   auto it = m.find(key);
 
     if (it != m.end()) {
-        std::cout << "Found " << key << " with value " << it->second << "\n";
+        cout << "Found " << key << " with value " << it->second << "\n";
     }	
 
 
@@ -64,7 +64,7 @@ struct DescendingOrder {
     }
 };
 
-std::set<int, DescendingOrder> s = {5, 3, 8, 4, 1};
+set<int, DescendingOrder> s = {5, 3, 8, 4, 1};
 
 
 // sort descending order vector
@@ -73,10 +73,10 @@ bool comparator(const int& lhs, const int& rhs) {
     return rhs < lhs;  // Note the reversed comparison for descending order
 }
 
-std::vector<int> vec = {5, 3, 8, 4, 1};
+vector<int> vec = {5, 3, 8, 4, 1};
 
   / Sort the vector in descending order using the custom comparator
-    std::sort(vec.begin(), vec.end(), comparator);
+    sort(vec.begin(), vec.end(), comparator);
 
 // descending order map by keys
 // Comparator struct for descending order of keys
@@ -86,18 +86,18 @@ struct Comparator {
     }
 };
 
-	std::map<int, std::string, Comparator> m;
+	map<int, string, Comparator> m;
 
 // priority_queue
 // default max prioriy_queue
- std::priority_queue<int> pq;
+ priority_queue<int> pq;
 
 // min priorit_queue
-std::priority_queue<int, std::vector<int>, std::greater<int>> minPq;
+priority_queue<int, vector<int>, greater<int>> minPq;
 
 // sort array and vector in descending order 
-std::sort(arr, arr + n, std::greater<int>());
-std::sort(vec.begin(), vec.end(), std::greater<int>());
+sort(arr, arr + n, greater<int>());
+sort(vec.begin(), vec.end(), greater<int>());
 
 ======== useful functions ===============
 strlen(str) // for character array
@@ -106,8 +106,8 @@ str.size() // for string
 str.substr(7) //gives substr
 
  size_t position = str.find(sub);
-   if (position != std::string::npos) {
-        std::cout << "Found '" << sub << "' at position " << position << std::endl;
+   if (position != string::npos) {
+        cout << "Found '" << sub << "' at position " << position << endl;
     }
 
         sort(paired.begin(), paired.end(), [](const pair<int, int>& a, const pair<int, int>& b) {
