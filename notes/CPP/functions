@@ -38,3 +38,5 @@ bool dp[n][n] = {false};
 substr(start index, length of substring) // not the end index
 string substr (size_t pos = 0, size_t len = npos) const;
 
+
+iswalnum(ch) // gives true if ch is alphanumeric
