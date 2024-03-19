@@ -58,7 +58,9 @@ Advanced SQL 50: https://leetcode.com/studyplan/premium-sql-50/
 
 #### Sprint interview ######
 
-Amazon Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/amazon-spring-23-high-frequency/
-Google Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/google-spring-23-high-frequency/
-Tiktok Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/tiktok-spring-23-high-frequency/
-Apple Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/apple-spring-23-high-frequency/
+- Amazon Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/amazon-spring-23-high-frequency/
+- Google Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/google-spring-23-high-frequency/
+- Tiktok Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/tiktok-spring-23-high-frequency/
+- Apple Spring 23 High Frequency Leetcode: https://leetcode.com/studyplan/apple-spring-23-high-frequency/
+
+
