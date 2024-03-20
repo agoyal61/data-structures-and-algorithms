@@ -27,3 +27,6 @@ MAX value of N                       Time complexity
    <= 160                            O(N ^ 4)
    <= 18                             O(2N*N2) 
    <= 10                             O(N!), O(2N)
+
+
+   - 5 * 10^4 ,  O(N ^ 2) gives time limit exceeded

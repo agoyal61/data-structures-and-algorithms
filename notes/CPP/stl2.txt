@@ -124,3 +124,40 @@ to_string(i + 1)
 reverse(s.begin() + i, s.begin() + j + 1)
 swap(s[left], s[right])
 static_cast<int>(s.size())  // C++ casting operator
+
+
+====== ordered set =========
+
+set<pair<int, int>> st; // set container automatically sorts its elements according to the first element of the pair when you're storing pairs in it.
+
+To sort based on second element we need custom comparator like below
+
+// custom comparator
+struct CompareSecond {
+    bool operator() (const pair<int, int>& a, const pair<int, int>& b) {
+        // Primary sort based on the second element
+        if (a.second != b.second) return a.second < b.second;
+        // Secondary sort based on the first element, if second elements are equal
+        return a.first < b.first;
+    }
+};
+
+// Create a set of pairs with the custom comparator
+set<pair<int, int>, CompareSecond> st; // sort based on second element of pair in ascending order
+
+// comparator 
+
+bool cmp(int a, int b) {
+    return a < b;
+}
+
+class Solution {
+    public:
+        // here static function is necessary without static it doesn't work because it is part of this pointer (class instance)
+        bool static cmp(int a, int b) {
+            return a < b;
+        }  
+
+        vector<int> vec;
+        sort(vec.begin(), vec.end(), cmp);
+}
