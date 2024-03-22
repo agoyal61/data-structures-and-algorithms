@@ -171,3 +171,32 @@ str.substr(10)
 
  long long ldividend = labs(dividend);
 isdigit(s[i])
+
+
+// int arr[], int x, int n
+
+/* get the index of first occurrence of x */
+  int *low = lower_bound(arr, arr+n, x);
+
+
+  set<pair<int, int>, greater<pair<int,int>>> st; // set in decreasing order by first element
+
+  priority_queue<pair<int, int> > heap; // max heap by first element
+
+  char* s
+  int n = strlen(s);
+  string str(s);
+
+// string to character array
+string str = "Hello, world!";
+const char* charArray = str.c_str();
+
+string& txt
+int n = txt.length()
+
+string temp; 
+temp.push_back(ch)
+temp.append("abc")
+
+# if str1 > str2 returns 1 , if str2 < str1 returns -1 else returns 0
+str1.compare(str2) 

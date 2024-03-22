@@ -1,0 +1,62 @@
+
+/*
+is correct in C and also in C++ for defining a structure named Node that represents a node in a binary tree. It explicitly uses the struct keyword before
+ Node when declaring pointers to the left and right child nodes. This is necessary in C to refer to a type defined by a struct, but it is also valid syntax
+  in C++:
+*/
+struct Node {
+    int data;
+    struct Node *left, *right;
+};
+
+int countNodes(struct Node* s) {
+
+}
+
+/*
+However, in C++, the struct keyword is optional when referring to a type defined by a struct.
+The following code is equivalent to the previous example:
+he second snippet is more typical of C++ code. In C++, once a struct type is defined, you can refer to it by its name without needing to prefix it with the
+struct keyword when declaring variables or types. This makes the code a bit cleaner and more similar to class usage in C++. This syntax is not valid in standard C, as C requires the struct keyword to reference struct types:
+*/
+
+struct Node {
+    int data;
+    Node *left, *right;
+};
+
+int countNodes(Node* s) {
+    
+}
+
+// This snippet correctly uses this-> to refer to member variables. This is a valid and common practice, especially for clarity when parameter names match member variable names.
+// Structure of a node of linked list
+struct Node {
+    int val;
+    Node* next;
+    Node* arbit;
+   
+    // Constructor
+    Node(int x)
+    {
+        this->val = x;
+        this->next = NULL;
+        this->arbit = NULL;
+    }
+};
+
+// names of the constructor's parameters do not conflict with the names of the member variables, there's no ambiguity, and thus direct assignment without this-> is perfectly clear and correct.
+// Structure of a node of linked list
+struct Node {
+    int val;
+    Node* next;
+    Node* arbit;
+   
+    // Constructor
+    Node(int x)
+    {
+       val = x;
+       next = NULL;
+        >arbit = NULL;
+    }
+};
