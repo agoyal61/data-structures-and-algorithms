@@ -1,0 +1,48 @@
+// n-ary node
+
+#include <vector>
+using namespace std;
+
+struct NaryTreeNode {
+    int data; // The data stored in the node
+    vector<NaryTreeNode*> children; // A vector of pointers to child nodes
+
+    // Constructor to initialize the node with data
+    NaryTreeNode(int data) : data(data) {}
+
+    // Method to add a child to this node
+    void addChild(NaryTreeNode* child) {
+        children.push_back(child);
+    }
+
+    // Destructor to clean up memory
+    ~NaryTreeNode() {
+        for (NaryTreeNode* child : children) {
+            delete child;
+        }
+    }
+};
+
+
+// Class version
+
+class NaryTreeNode {
+public:
+    int data; // The data stored in the node
+    vector<NaryTreeNode*> children; // A vector of pointers to child nodes
+
+    // Constructor to initialize the node with data
+    NaryTreeNode(int data) : data(data) {}
+
+    // Method to add a child to this node
+    void addChild(NaryTreeNode* child) {
+        children.push_back(child);
+    }
+
+    // Destructor to clean up memory
+    ~NaryTreeNode() {
+        for (NaryTreeNode* child : children) {
+            delete child;
+        }
+    }
+};
