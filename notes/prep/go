@@ -1,0 +1,34 @@
+1. graph
+2. DP
+3. Tree
+4. string
+5. Trie
+
+
+Emphasized the following topics for DSA round:
+* 		Graph: BFS, DFS, Topological sort, Shortest Path
+* 		Tree: Binary tree, Binary search Tree, N child tree
+* 		Trie: Prefix search, Word search with counts
+* 		Disjoint set union
+* 		Heap: Median in a stream, Sliding window maximum, Top k elements
+* 		Binary Search: Lower bound, Upper bound, Questions where binary search is not the obvious choice
+* 		Sliding window and 2 pointers based questions
+* 		Dynamic programming
+* 		Strings: KMP, String sorting
+* 		Adhoc questions on the application of Array, Stack, Queue, HashMap, TreeMap
+
+
+Google mostly prefer Graphs, Trees and String questions.
+HashMap + LRU technique.
+DP, binary search and Graph
+Topological Sort
+Graph, DP, Tree, Trie, String
+
+Got string matching problem. Tried solving using LPS (KMP)
+Rabin karp - rolling hash is much easier to implement during interviews
+
+Google | Phone interview
+Google Screening
+google screening
+google phone interview
+google onsite
