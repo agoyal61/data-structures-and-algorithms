@@ -88,11 +88,23 @@ if (found != string::npos)
 else
       cout << "'World' not found." << endl;
 
+string str = "Hello, World! Welcome to C++ programming.";
 
-  auto it = find(vec.begin(), vec.end(), 3);  if (it != vec.end()) { }
+// Find the last occurrence of a vowel
+size_t pos = str.find_last_of("aeiouAEIOU");
+if (pos != string::npos) {
+    cout << "The last vowel ('" << str[pos] << "') is found at position: " << pos << endl;
+} else {
+    cout << "No vowels found." << endl;
+}
 
- for (char c = 'a'; c <= 'z'; c++) // loop character
- unordered_map<int,unordered_map<int,int>> m;  // m[x][y]++;
+// similarly find_first_of function for finding first character or substring
+find_first_of() 
+
+auto it = find(vec.begin(), vec.end(), 3);  if (it != vec.end()) { }
+
+for (char c = 'a'; c <= 'z'; c++) // loop character
+unordered_map<int,unordered_map<int,int>> m;  // m[x][y]++;
 
 vector<vector<int>> res;  // return {};
 deque<int> dq;
