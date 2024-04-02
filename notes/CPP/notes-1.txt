@@ -77,7 +77,18 @@ auto it = m.find(key);
 str.compare(0, prefix.length(), prefix) == 0. If the condition is true, it means that str starts with prefix.
 
  // Find the position of the first 'o' character
-  size_t position = str.find('o');      if (position != std::string::npos) { }
+  size_t position = str.find('o');      if (position != string::npos) { }
+
+// find function return size_t
+// string::npos is a constant of type size_t that represents the largest possible value for this type.
+string s = "Hello, World!";
+size_t found = s.find("World");
+if (found != string::npos)
+      cout << "'World' found at: " << found << endl;
+else
+      cout << "'World' not found." << endl;
+
+
   auto it = find(vec.begin(), vec.end(), 3);  if (it != vec.end()) { }
 
  for (char c = 'a'; c <= 'z'; c++) // loop character

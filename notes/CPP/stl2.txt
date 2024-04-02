@@ -161,3 +161,13 @@ class Solution {
         vector<int> vec;
         sort(vec.begin(), vec.end(), cmp);
 }
+
+
+// the multiset container, like set, is typically implemented as a balanced binary search tree (BBST).
+Ordered: Elements in a multiset are automatically arranged in a specific order (usually ascending) based on their value.
+Duplicates Allowed: Unlike a set, a multiset can contain multiple elements with the same value.
+Dynamic Size: The size of a multiset can change dynamically; elements can be added or removed at runtime.
+Element Access: Direct element access (by index) is not provided; elements are accessed through iterators.
+Bidirectional Iterators: Provides bidirectional iterators that can traverse the container forwards and backwards.
+
+multiset<int> ms;

@@ -40,3 +40,5 @@ string substr (size_t pos = 0, size_t len = npos) const;
 
 
 iswalnum(ch) // gives true if ch is alphanumeric
+
+int index = str.find_last_of('\t') + 1; // find the last index of tab character
