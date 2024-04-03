@@ -29,3 +29,7 @@ vector<vector<int>> matrix1(5, std::vector<int>(4, 0));  // 5x4 matrix initializ
 vector<vector<int>> matrix2 = {{1,2,3}, {4,5,6}, {7,8,9}}; // 3x3 matrix with specified values
 
 vector<vector<bool>> matrix(rows, vector<bool>(cols, false));
+
+
+vector<int> v1, v2;
+v1.insert(v1.end(), v2.begin(), v2.end()) // insert all values of vector v2 at the end of vector v1

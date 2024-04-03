@@ -1,0 +1,12 @@
+
+// Line Sweep Algorithm or Plane Sweep Algorithm or Sweep Line Algorithm or Events
+
+// line sweep algorithm is used to solve probmes that involve intervals or events that have a start and end time such as meeting scheduling, interval scheduling, train arrival and departure, customer arrival and departure at resturant, etc.
+// it is used to find intersections, union, difference, etc. of intervals (line segments) or events
+// the algorithm works by sorting the events by their start time and then iterating through the events
+// at each event, we can update the state of the algorithm and then check if the state satisfies the problem constraints
+// the algorithm is O(nlogn) where n is the number of events
+//  # 2^n subset generation of a set nums
+// think of the events as a line that sweeps through the plane and intersects with the intervals
+// the line is the current time and the intervals are the events
+// increase the active by 1 when interval start and decrease the active by 1 when intervals end
