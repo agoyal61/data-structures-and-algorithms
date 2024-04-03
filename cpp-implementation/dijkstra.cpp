@@ -34,7 +34,7 @@ const int INF = numeric_limits<int>::max();
 
 void dijkstra(const vector<vector<pair<int, int>>>& graph, int start) {
     int n = graph.size();
-    vector<int> dist(n, INF); 
+    vector<int> dist(n, INF); // To store the distance of each vertex from the source vertex
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // Min-heap distance, vertex
 
     pq.push({0, start});
