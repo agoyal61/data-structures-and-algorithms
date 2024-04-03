@@ -1,1 +1,3 @@
 pattern-searching algorithms like KMP, Rabin Karp, Boyer Moore
+- Rabin-Karp algorithm for pattern searching
+- tarjan's algorithm for graph
