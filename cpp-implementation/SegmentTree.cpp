@@ -3,21 +3,23 @@
 class NumArray {
 private:
     vector<int> nums;
-    vector<int> segmentTree;
-    int n;    
+    vector<int> segmentTree; // segment tree is a binary tree where each node contains the sum of the elements in the array represented by the leaf nodes of the node.
+    int n;   // n is the number of elements in the array for which segment tree is built. 
+    // node is the index of the current node in the segment tree. start and end are the starting and ending indices of the segment represented by the current node, which is used to update the segment tree.
     void buildSegmentTree(int node, int start, int end){
         if(start==end){
             segmentTree[node]=nums[start];
             return;
         }
-        int mid=start+(end-start)/2;
-        int leftChild=2*node + 1;
-        int rightChild=2*node + 2;
+        int mid=start+(end-start)/2; // mid is the middle index of the segment represented by the current node
+        int leftChild=2*node + 1; // left child of the current node is at index 2*node + 1
+        int rightChild=2*node + 2; // right child of the current node is at index 2*node + 2
         buildSegmentTree(leftChild, start, mid);
         buildSegmentTree(rightChild, mid+1,end);
         segmentTree[node]=segmentTree[leftChild]+segmentTree[rightChild];
     }
 
+    // index is the index of the element to be updated in the array. val is the new value to be updated.
     void updateSegmentTree(int node, int start, int end, int index, int val){
         if(start==end){
             nums[index]=val;
@@ -35,9 +37,11 @@ private:
         segmentTree[node]=segmentTree[leftChild]+segmentTree[rightChild];
     }
 
+    // left and right are the range of the sum query. start and end are the starting and ending indices of the segment represented by the current node.
     int sumRangeSegmentTree(int node, int start, int end, int left, int right){
-        if(right<start || end<left) return 0;
-        if(left<=start&&end<=right) return segmentTree[node];
+        if(right<start || end<left) return 0; // range (left, right) of sum query is out of range
+        if(left<=start&&end<=right) return segmentTree[node]; // range (left, right) of sum query is completely inside the range represented by the current node
+        // range (left, right) of sum query is partially inside and partially outside the range represented by the current node
         int mid=start+(end-start)/2;
         int leftChild=2*node + 1;
         int rightChild=2*node + 2;
@@ -49,17 +53,17 @@ public:
     NumArray(vector<int>& nums) {
         this->nums=nums;
         n=nums.size();
-        segmentTree.resize(n*4,0);
+        segmentTree.resize(n*4,0); // segment tree is a full binary tree with 2n-1 nodes. So, the size of the segment tree is 4*n. initialize all the nodes of the segment tree with 0.
         buildSegmentTree(0,0,n-1);
     }
     
     void update(int index, int val) {
-        if(index<0 || index>=n) return;
+        if(index<0 || index>=n) return; // index is out of range
         updateSegmentTree(0,0,n-1,index,val);
     }
     
     int sumRange(int left, int right) {
-        if(left<0 || right>=n || left > right) return 0;
+        if(left<0 || right>=n || left > right) return 0; // left or right is out of range
         return sumRangeSegmentTree(0,0,n-1,left,right);
     }
 };
@@ -80,6 +84,7 @@ each representing an element of the array. The number of internal nodes is n-1. 
 
 // Since Segment Tree is a binary tree. 2 * node will represent the left child and 2 * node + 1 will represent the right child. start and end represent the interval represented by the current node.
 // Complexity of build is O(n).
+
 void build(int node, int start, int end)
 {
     if(start == end)
@@ -151,3 +156,5 @@ int query(int node, int start, int end, int l, int r)
     int p2 = query(2*node+1, mid+1, end, l, r);
     return (p1 + p2);
 }
+
+

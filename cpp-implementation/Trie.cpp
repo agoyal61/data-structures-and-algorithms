@@ -1,6 +1,39 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
+// Trie data structure
+// Time complexity: O(n), Space complexity: O(n)
+// it is a tree data structure used to store a dynamic set of strings
+// it is used in information retrieval and searching
+// it is used in autocomplete systems
+// it is used in spell checkers
+// it is used in IP routing (Longest Prefix Matching)
+// it is used in prefix matching
+// it is used in pattern matching
+// it is used in finding the longest common prefix
+// it is used in finding the longest common suffix
+// it is used in finding the longest common substring
+// it is used in finding the longest common subsequence
+// it is used in finding the longest repeated substring
+// it is used in finding the longest palindrome substring
+// it is used in finding the longest palindrome subsequence
+// it is used in finding the longest repeated subsequence
+// it is used in finding the longest common prefix array
+// it is used in finding the longest common suffix array
+// it is used in finding the longest common substring array
+// it is used in finding the longest common subsequence array
+// it is used in finding the longest repeated substring array
+// it is used in finding the longest palindrome substring array
+// it is used in finding the longest palindrome subsequence array
+// it is used in finding the longest repeated subsequence array
+// it is used in finding the longest common prefix suffix array
+// it is used in finding the longest common prefix substring array
+// it is used in finding the longest common prefix subsequence array
+// it is used in finding the longest common suffix substring array
+// it is used in finding the longest common suffix subsequence array
+// it is used in finding the longest common substring subsequence array
+
 struct TrieNode {
     int count=0;
     unordered_map<int,TrieNode*> children;

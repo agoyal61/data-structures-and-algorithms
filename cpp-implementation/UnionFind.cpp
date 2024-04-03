@@ -1,6 +1,26 @@
 #include <bits/stdc++.h>
 
 using namespace std;
+
+// UnionFind for Integer
+// Disjoint Set Union (DSU) or Union Find algorithm
+// Time complexity: O(1) for find and union operations, Space complexity: O(n)
+// it is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets
+// it is used to find whether two elements are in the same set or not and to merge two sets
+// it is used in Kruskal's algorithm to find the minimum spanning tree of a graph
+// it is used in image processing to find connected components
+// it is used in network connectivity algorithms
+// it is used in LCA (Lowest Common Ancestor) algorithms
+// it is used in dynamic connectivity problems
+// it is used in finding the number of connected components in a graph
+// it is used in finding the number of islands in a grid
+// it is used in finding the number of connected components in a grid
+// it is used in finding the number of connected components in a matrix
+// it is used in finding the number of connected components in a tree
+// it is used in finding the number of connected components in a graph with edges
+
+
+// template 1
 class Solution {
 public:
     vector<int> parent;
@@ -23,7 +43,7 @@ class UnionFind{
     public:
         vector<int> parent;
         UnionFind(int size) : parent(size){
-            iota(parent.begin(),parent.end(),0);
+            iota(parent.begin(),parent.end(),0); // iota assigns increasing values to the elements of the container starting from the given value
         }
         int find(int x){
             if(parent[x]!=x){
@@ -78,6 +98,7 @@ int performUnion(vector<int>& rep, vector<int>& size, int x, int y){
     return  1;
 }
 
+// template 3
 // UnionFind for String
 class UnionFind{
     public:
@@ -113,13 +134,14 @@ class UnionFind{
         }
 };
 
+// template 4 with rank
 // with rank
 class UnionFind{
     private:
         vector<int> parent,rank;
     public:
         UnionFind(int size){
-            parent.resize(size);
+            parent.resize(size); 
             rank.resize(size,0);
             for(int i=0;i<size;i++)parent[i]=i;
         }    
@@ -143,7 +165,7 @@ class UnionFind{
         }
 };
 
-//
+// template 5 with rank and path compression
 class UnionFind{
     private:
         vector<int> parent,rank;

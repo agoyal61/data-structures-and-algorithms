@@ -7,6 +7,7 @@ using namespace std;
 
 const int INF = numeric_limits<int>::max();
 
+// Single source shortest path algorithm
 // Time complexity: O((V+E)logV), Space complexity: O(V)
 // it is a greedy algorithm, it finds the shortest path from a source vertex to all other vertices in the graph
 // it works for both directed and undirected graphs
@@ -27,6 +28,9 @@ const int INF = numeric_limits<int>::max();
             ii. Insert the neighbor with the updated distance into the priority queue
     5. Print the distance of all vertices
 */ 
+// it is used in finding the shortest path from a source vertex to all other vertices in a graph
+// it is used in finding the shortest path from a source vertex to all other vertices in a weighted graph
+
 
 void dijkstra(const vector<vector<pair<int, int>>>& graph, int start) {
     int n = graph.size();
