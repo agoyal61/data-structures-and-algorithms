@@ -7,10 +7,31 @@ using namespace std;
 
 const int INF = numeric_limits<int>::max();
 
+// Time complexity: O((V+E)logV), Space complexity: O(V)
+// it is a greedy algorithm, it finds the shortest path from a source vertex to all other vertices in the graph
+// it works for both directed and undirected graphs
+// it works for graphs with negative weights, but not for graphs with negative cycles
+// it is not optimal for dense graphs, for dense graphs use Bellman-Ford algorithm
+// it is optimal for sparse graphs
+// it is optimal for graphs with positive weights and graphs with negative weights
+
+/*
+    Algorithm steps:  
+    1. Initialize the distance of all vertices as infinity except the source vertex as 0 
+    2. Create a priority queue to hold vertices and their distances
+    3. Insert the source vertex with distance 0 into the priority queue
+    4. While the priority queue is not empty, do the following:
+        a. Extract the vertex with the minimum distance from the priority queue
+        b. For each neighbor of the extracted vertex, do the following:
+            i. If the distance of the neighbor is greater than the distance of the extracted vertex plus the weight of the edge between them, update the distance of the neighbor to the distance of the extracted vertex plus the weight of the edge between them
+            ii. Insert the neighbor with the updated distance into the priority queue
+    5. Print the distance of all vertices
+*/ 
+
 void dijkstra(const vector<vector<pair<int, int>>>& graph, int start) {
     int n = graph.size();
     vector<int> dist(n, INF); 
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // Min-heap
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq; // Min-heap distance, vertex
 
     pq.push({0, start});
     dist[start] = 0;

@@ -3,7 +3,7 @@
 
 ///////////////////////////////////
 vector<vector<int>> graph;
-vector<vector<pair<int,int>>> graph; // graph with edge weight
+vector<vector<pair<int,int>>> graph; // graph with edge weight // u, v, w   // adjacency list with weight
 vector<int> visited;
 vector<bool> visited;
 vector<unordered_set<int>> graph(n);
