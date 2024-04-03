@@ -1,3 +1,7 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
 vector<int> nextSmaller(vector<int>& nums, int n) {
     vector<int> ns;
     stack<int> s;
