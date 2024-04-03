@@ -1,8 +1,82 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <numeric>
 
 using namespace std;
+
+/*
+    Kruskal's algorithm to find Minimum Spanning Tree (MST) of a given connected, undirected and weighted graph.
+    Steps:
+    1. Sort all the edges in non-decreasing order of their weight.
+    2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge. Else, discard it.
+    3. Repeat step 2 until there are (V-1) edges in the spanning tree.
+
+    Time complexity: O(ElogE) or O(ElogV)
+    Space complexity: O(V)
+
+    Applications:
+    1. Network design
+    2. Cluster analysis
+    3. Image segmentation
+    4. Shortest path in a maze
+    5. Approximation algorithms
+    6. Travelling Salesman Problem
+    7. Minimum Spanning Tree
+    8. Clustering
+    9. Image segmentation
+    10. Computer networks
+    11. Civil network design
+    12. Robotics
+    13. Computer vision
+    14. Machine learning
+*/ 
+
+// template 2
+// edges[i] = {u, v, weight} where u and v are nodes and weight is the weight of the edge // n is the number of nodes
+void kruskalMST(vector<vector<int>>& edges, int n) {
+    // Sort edges based on their weights 
+    sort(edges.begin(), edges.end(), [](const vector<int>& a, const vector<int>& b) {
+        return a[2] < b[2];
+    });
+
+    // Create a disjoint set
+    vector<int> parent(n);
+    iota(parent.begin(), parent.end(), 0);
+
+    // Find the parent of a node
+    function<int(int)> find = [&](int u) {
+        return parent[u] == u ? u : parent[u] = find(parent[u]);
+    };
+
+    // Union of two sets
+    auto Union = [&](int u, int v) {
+        parent[find(u)] = find(v);
+    };
+
+    // Initialize the MST
+    vector<vector<int>> mst;
+    int cost = 0;
+
+    // Iterate through all edges
+    for (const auto& edge : edges) {
+        int u = edge[0], v = edge[1], weight = edge[2];
+
+        // Check if the nodes are in the same set
+        if (find(u) != find(v)) {
+            mst.push_back({u, v, weight});
+            cost += weight;
+            Union(u, v);
+        }
+    }
+
+    // Print the MST
+    for (const auto& edge : mst) {
+        cout << edge[0] << " - " << edge[1] << " : " << edge[2] << endl;
+    }
+}
+
+
 
 // Edge structure to store edges and their weights
 struct Edge {
@@ -68,7 +142,7 @@ bool compareEdges(Edge a, Edge b) {
     return a.weight < b.weight;
 }
 
-// Kruskal's algorithm to find MST
+// template 1
 void KruskalMST(Graph& graph) {
     int V = graph.V;
     vector<Edge> result;
@@ -114,7 +188,6 @@ int main() {
     graph.addEdge(1, 3, 15);
     graph.addEdge(2, 3, 4);
 
-    // Function call
     KruskalMST(graph);
 
     return 0;
