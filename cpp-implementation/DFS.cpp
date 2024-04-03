@@ -78,10 +78,12 @@ public:
     }
 };
 
+// Time complexity: O(V + E)
+// Space complexity: O(V)
 class Graph {
 public:
     vector<vector<int>> graph;
-    vector<bool> vis;
+    vector<bool> vis;  // or vector<int> vis; can be used to store the visited nodes
     void dfs(int s){
         vis[s]=true;
         for(int v:graph[s]){
@@ -94,9 +96,9 @@ public:
 
 class Solution {
 public:
-    unordered_map<int, vector<pair<int, int>>> graph;
+    unordered_map<int, vector<pair<int, int>>> graph; // graph to store u, v, w (u -> v with weight w)
     vector<bool> visited;
 
-        graph.clear();
-        visited.assign(n, false);
+    graph.clear();
+    visited.assign(n, false); // assign n nodes as not visited
 };
