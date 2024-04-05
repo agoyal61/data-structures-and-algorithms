@@ -84,3 +84,68 @@ void primMST(vector<vector<int>>& graph, int n) {
         cout << parent[i] << " - " << i << " \t" << graph[i][parent[i]] << endl;
     }
 }
+
+
+// Prims implementation with the heap using pq
+
+struct Edge {
+    int to;
+    int weight;
+};
+
+struct Vertex {
+    int id;
+    int key;
+    
+    bool operator>(const Vertex& other) const {
+        return key > other.key;
+    }
+};
+
+vector<Edge> primMST(const vector<vector<Edge>>& graph, int start) {
+    int n = graph.size();
+    priority_queue<Vertex, vector<Vertex>, greater<Vertex>> pq;
+    vector<int> key(n, INT_MAX);
+    vector<int> parent(n, -1);
+    vector<bool> inMST(n, false);
+    key[start] = 0;
+    pq.push({start, 0});
+    vector<Edge> MST;
+    while (!pq.empty()) {
+        int u = pq.top().id;
+        pq.pop();
+        if (inMST[u])
+            continue;
+        inMST[u] = true;
+        if (parent[u] != -1)
+            MST.push_back({u, key[u]});
+        for (const Edge& edge : graph[u]) {
+            int v = edge.to;
+            int weight = edge.weight;
+            if (!inMST[v] && weight < key[v]) {
+                parent[v] = u;
+                key[v] = weight;
+                pq.push({v, key[v]});
+            }
+        }
+    }
+    return MST;
+}
+
+
+/*
+Prim's algorithm is another greedy algorithm used to find the minimum spanning tree (MST) of a connected, undirected graph. The algorithm operates by building the tree one vertex at a time, from an arbitrary starting vertex, at each step adding the cheapest possible connection from any vertex in the tree to a vertex that is not in the tree.
+
+until it spans all vertices. Here's how Prim's algorithm works:
+
+1. Initialization: Choose an arbitrary vertex to start the MST. Initialize an empty set (or heap) of vertices and an empty set of edges.
+
+2. Grow the Tree: Repeat the following steps until all vertices are included in the MST:
+
+Select the vertex v that is not yet in the MST and has the minimum edge weight connecting it to the MST. Add v to the MST.Add the edge connecting v to the MST to the set of edges.
+3. Termination: When all vertices are included in the MST, the algorithm terminates.
+
+4. Output: The set of edges collected during the execution of Prim's algorithm forms the minimum spanning tree.
+
+Prim's algorithm can be implemented using various data structures for efficient selection and manipulation of vertices and edges. One common approach is to use a priority queue (usually implemented with a heap) to efficiently select the next vertex to add to the MST based on the weight of its connecting edge.
+*/

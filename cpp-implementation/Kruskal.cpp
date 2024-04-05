@@ -79,6 +79,8 @@ void kruskalMST(vector<vector<int>>& edges, int n) {
 
 
 // Edge structure to store edges and their weights
+ // other way to Create a vector to store the edges of the graph
+//  vector<vector<int>> edges; // weight, u, v or u, v, wt
 struct Edge {
     int src, dest, weight;
 };
@@ -192,3 +194,27 @@ int main() {
 
     return 0;
 }
+
+
+/*
+ Kruskal's algorithm is a greedy algorithm used to find the minimum spanning tree (MST) of a connected, undirected graph.
+
+Algorithm -
+1. Sort Edges: First, sort all the edges of the graph in non-decreasing order of their weights.
+
+2. Select Edges: Starting from the smallest edge, select edges one by one. Add each selected edge to the MST if it does not form a cycle with the edges already selected.
+
+3 .Union-Find Data Structure: To efficiently determine whether adding an edge will form a cycle, Kruskal's algorithm typically employs a disjoint-set data structure (also known as union-find). This data structure maintains disjoint sets of elements, and efficient operations for checking connectivity and merging sets.
+
+4. Repeat: Repeat step 2 until there are n−1 edges in the MST, where n is the number of vertices in the graph.
+
+5. Output: The set of edges selected forms the minimum spanning tree.
+*/
+
+/*
+ - Minium spanning tree, number of vertices = n, no of edges = n-1
+ - intermediate stage may be disconnected in kruskal, however in prims it is always connected
+ - Time complexity 
+    - using min heap (V + E) log E
+
+*/

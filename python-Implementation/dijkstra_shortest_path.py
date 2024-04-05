@@ -4,6 +4,13 @@ from typing import List
 # Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, edges networks.
 # edges = [u,v,wt]
 # Time complexity: O(ElogV)
+# single source shortest path algorithm
+# single source least cost
+# both directed and undirected graph
+# all edge must have non-negative weight, it is not valid for negtaive weight
+# graph must be connected 
+# remove all self loop and parallel edge
+# it is applied on weighted graph
 
 def minCost(n: int, edges:  List[List[int]]):
     graph = {i: [] for i in range(1, n+1)}

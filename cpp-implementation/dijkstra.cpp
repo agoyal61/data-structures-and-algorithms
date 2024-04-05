@@ -31,6 +31,19 @@ const int INF = numeric_limits<int>::max();
 // it is used in finding the shortest path from a source vertex to all other vertices in a graph
 // it is used in finding the shortest path from a source vertex to all other vertices in a weighted graph
 
+/*
+# Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, edges networks.
+# edges = [u,v,wt]
+# Time complexity: O(ElogV)
+# single source shortest path algorithm
+# single source least cost
+# both directed and undirected graph
+# all edge must have non-negative weight, it is not valid for negtaive weight
+# graph must be connected 
+# remove all self loop and parallel edge
+# it is applied on weighted graph
+# overall time complexity of Dijkstra's algorithm with a binary heap implementation is O((V + E) log n), where V is the number of vertices and E is the number of edges in the graph
+*/
 
 void dijkstra(const vector<vector<pair<int, int>>>& graph, int start) {
     int n = graph.size();

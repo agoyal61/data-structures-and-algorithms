@@ -1,0 +1,7 @@
+// both are correct
+ vector<vector<int>> graph(numCourses, vector<int>());
+
+  vector<vector<int>> graph(numCourses);
+
+     // Use Bézout's identity (ax + by = d) to check if target is reachable from x, y then
+        target % gcd(x, y) == 0

@@ -196,3 +196,44 @@ class UnionFind{
             }
         }
 };
+
+
+// other implementation of union find
+
+class UnionFind {
+private:
+    unordered_map<int, int> parent;
+    unordered_map<int, int> size;
+
+public:
+    int find(int x) {
+        if (parent.find(x) == parent.end())
+            return x;
+        if (parent[x] != x)
+            parent[x] = find(parent[x]);
+        return parent[x];
+    }
+
+    void unite(int x, int y) {
+        int rootX = find(x);
+        int rootY = find(y);
+        if (rootX != rootY) {
+            parent[rootX] = rootY;
+            size[rootY] += size[rootX];
+        }
+    }
+
+    int getSize(int x) {
+        return size[find(x)];
+    }
+
+    void insert(int x) {
+        if (parent.find(x) != parent.end()) return;
+        parent[x] = x;
+        size[x] = 1;
+    }
+
+    bool contains(int x) {
+        return parent.find(x) != parent.end();
+    }
+};
