@@ -31,14 +31,15 @@ using namespace std;
 class Solution {
 public:
     // template 1
+    // points is a 2D vector of points and n is the number of vertices
     int minCostConnectPoints(vector<vector<int>>& points, int n) {
-        vector<int> dist(n, INT_MAX);
-        vector<bool> visited(n, false);
+        vector<int> dist(n, INT_MAX); // Distance of each vertex from the MST
+        vector<bool> visited(n, false); // To keep track of visited vertices
         dist[0] = 0;
         int cost = 0;
 
         for (int i = 0; i < n; i++) {
-            int u = -1;
+            int u = -1; // Find the vertex with the minimum distance
             for (int j = 0; j < n; j++) {
                 if (!visited[j] && (u == -1 || dist[j] < dist[u]))
                     u = j;
@@ -134,9 +135,10 @@ vector<Edge> primMST(const vector<vector<Edge>>& graph, int start) {
 
 
 /*
-Prim's algorithm is another greedy algorithm used to find the minimum spanning tree (MST) of a connected, undirected graph. The algorithm operates by building the tree one vertex at a time, from an arbitrary starting vertex, at each step adding the cheapest possible connection from any vertex in the tree to a vertex that is not in the tree.
-
-until it spans all vertices. Here's how Prim's algorithm works:
+Prim's algorithm is another greedy algorithm used to find the minimum spanning tree (MST) of a connected, undirected graph. The algorithm operates by building
+the tree one vertex at a time, from an arbitrary starting vertex, at each step adding the cheapest possible connection from any vertex in the tree to a vertex that is not in the tree.
+until it spans all vertices.
+Here's how Prim's algorithm works:
 
 1. Initialization: Choose an arbitrary vertex to start the MST. Initialize an empty set (or heap) of vertices and an empty set of edges.
 
