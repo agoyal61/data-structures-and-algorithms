@@ -1,0 +1,2 @@
+string str;
+size_t nonZeroIndex = str.find_first_not_of('0');
