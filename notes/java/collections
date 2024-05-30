@@ -1,0 +1,207 @@
+ArrayList<int> al = ArrayList<int>(); // does not work  
+ArrayList<Integer> al = new ArrayList<Integer>(); // works fine 
+list.add(1);    
+
+ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
+//Traversing list through Iterator  
+Iterator itr=list.iterator();//getting the Iterator  
+while(itr.hasNext()){//check if iterator has the elements  
+    System.out.println(itr.next());//printing the element and move to next  
+}  
+
+//Traversing list through for-each loop  
+ for(String fruit:list)    
+    System.out.println(fruit);    
+
+list.size() // returns the number of elements in the list.
+list.isEmpty() // returns true if the list is empty, otherwise false.
+list.get(1) // returns the element at the specified position in this list.
+list.set(1, "Mango") // replaces the element at the specified position in this list with the specified element.
+al.remove(0);  // removes the element at the specified position in this list.
+Collections.sort(list) // sorts the list in ascending order.
+Collections.sort(list, Collections.reverseOrder()) // sorts the list in descending order.
+Collections.reverse(list) // reverses the order of the elements in the list.
+int max = Collections.max(list); // Finding the maximum element
+int min = Collections.min(list); // Finding the minimum element
+
+
+ArrayList<Student> al=new ArrayList<Student>();  
+Iterator itr=al.iterator();  
+//traversing elements of ArrayList object  
+while(itr.hasNext()){  
+    Student st=(Student)itr.next();  
+    System.out.println(st.rollno+" "+st.name+" "+st.age);  
+}  
+
+
+LinkedHashMap<Integer, Integer> hm = new LinkedHashMap<Integer, Integer>(); // maintains the insertion order
+hm.entrySet().iterator().next().getKey(); // returns the first key
+hm.entrySet().iterator().next().getValue(); // returns the first value
+hm.entrySet().iterator().next().setValue(10); // sets the value of the first key
+
+//Creating a HashMap
+Map<Integer, String> romanMap = new LinkedHashMap<>();
+Map<Integer,String> map=new HashMap<Integer,String>();  
+map.put(100,"Amit");  
+map.get(100); // returns Amit 
+map.putifAbsent(101,"Vijay"); // inserts the specified value with the specified key in the map if the key is not already associated with a value.
+//Elements can traverse in any order  
+for(Map.Entry m:map.entrySet()){  
+    System.out.println(m.getKey()+" "+m.getValue());  
+}  
+
+for(Map.Entry<Integer, String> m:map.entrySet()){  
+    System.out.println(m.getKey()+" "+m.getValue());  
+}  
+
+
+map.entrySet()
+.stream()  
+.sorted(Map.Entry.comparingByKey()) // sorting by key
+.sorted(Map.Entry.comparingByKey(Comparator.reverseOrder()))   //Sorted according to the provided Comparator  
+.sorted(Map.Entry.comparingByValue()) // sorting by value
+.sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())) // sorting by value in reverse order
+.forEach(System.out::println);  
+
+map.remove(Object key) // removes the key-value pair for the specified key.
+map.containsKey(Object key) // returns true if this map contains a mapping for the specified key.
+map.containsValue(Object value) // returns true if this map maps one or more keys to the specified value.
+map.size() // returns the number of key-value mappings in this map.
+map.isEmpty() // returns true if this map contains no key-value mappings.
+map.clear() // removes all of the mappings from this map.
+map.keySet() // returns a Set view of the keys contained in this map.
+map.values() // returns a Collection view of the values contained in this map.
+map.entrySet() // returns a Set view of the mappings contained in this map.
+
+
+// creating a hashset
+HashSet<String> set=new HashSet<String>();
+set.add("Ravi");
+set.remove("Ravi");  // removes the specified element from the set.
+set.contains("Ravi"); // returns true if the set contains the specified element.
+set.size(); // returns the number of elements in the set.
+set.isEmpty(); // returns true if the set is empty, otherwise false.
+set.clear(); // removes all of the elements from the set.
+set.iterator(); // returns an iterator over the elements in the set.
+set.stream().forEach(System.out::println); // prints all elements in the set.
+set.toArray(); // returns an array containing all of the elements in the set.
+
+// traversing elements
+Iterator<String> itr=set.iterator();
+while(itr.hasNext()){
+    System.out.println(itr.next());
+}
+
+//Traversing list through for-each loop
+for(String fruit:set)    
+    System.out.println(fruit);
+
+ArrayList<String> list=new ArrayList<String>();  
+HashSet<String> set=new HashSet(list);   // converting list to set
+
+TreeSet<String> al=new TreeSet<String>();   // creating treeSet // TreeSet is used to store unique elements in ascending order.
+
+
+PriorityQueue<String> queue=new PriorityQueue<String>();  // by default min heap
+PriorityQueue<String> maxheap=new PriorityQueue<String>(Collections.reverseOrder()); // max heap
+
+queue.add("Amit Sharma"); // adds the specified element to the queue.
+queue.offer("Vijay Raj"); // adds the specified element to the queue. // returns true if the element was added to the queue, otherwise false. // use it
+queue.element(); // returns the head of the queue.
+queue.peek(); // returns the head of the queue. // returns null if the queue is empty. // use it
+queue.remove(); // removes the head of the queue.
+queue.poll(); // removes the head of the queue. // returns null if the queue is empty. // use it
+queue.size(); // returns the number of elements in the queue.
+queue.isEmpty(); // returns true if the queue is empty, otherwise false.
+queue.clear(); // removes all of the elements from the queue.
+queue.toArray(); // returns an array containing all of the elements in the queue.
+queue.iterator(); // returns an iterator over the elements in the queue.
+queue.stream().forEach(System.out::println); // prints all elements in the queue.
+
+// traversing elements
+Iterator<String> itr=queue.iterator();
+while(itr.hasNext()){
+    System.out.println(itr.next());
+}
+
+//Traversing list through for-each loop
+for(String fruit:queue)    
+    System.out.println(fruit);
+
+
+//Creating Deque and adding elements  
+Deque<String> deque = new ArrayDeque<String>();  
+deque.add("Gautam");
+deque.peek(); // returns the head of the deque.
+deque.poll(); // removes the head of the deque.
+deque.offer("Karan"); // adds the specified element to the deque. // returns true if the element was added to the deque, otherwise false.
+deque.offerFirst("Shubham"); // inserts the specified element at the front of the deque.
+deque.offerLast("Suresh"); // inserts the specified element at the end of the deque.
+deque.peekFirst(); // returns the first element of the deque.
+deque.peekLast(); // returns the last element of the deque.
+deque.pollFirst(); // removes the first element of the deque.
+deque.pollLast(); // removes the last element of the deque.
+//Traversing elements  
+for (String str : deque) {  
+ System.out.println(str);  
+}  
+
+//creating an instance of Stack class  
+Stack<Integer> stk= new Stack<>();  
+stk.push(10);
+stk.pop(); // removes the element at the top of the stack.
+stk.peek(); // returns the element at the top of the stack.
+stk.empty(); // returns true if the stack is empty, otherwise false.
+stk.search(10); // returns the 1-based position where an object is on this stack.
+stk.size(); // returns the number of elements in the stack.
+stk.isEmpty(); // returns true if the stack is empty, otherwise false.
+stk.clear(); // removes all of the elements from the stack.
+stk.toArray(); // returns an array containing all of the elements in the stack.
+stk.iterator(); // returns an iterator over the elements in the stack.
+stk.stream().forEach(System.out::println); // prints all elements in the stack.
+
+// traversing elements
+Iterator<Integer> itr=stk.iterator();
+while(itr.hasNext()){
+    System.out.println(itr.next());
+}
+
+//Traversing list through for-each loop
+for(Integer fruit:stk)    
+    System.out.println(fruit);
+
+Queue<String> queue = new LinkedList<>();
+queue.add("First"); // Add elements to the queue
+System.out.println("Queue: " + queue); // Display the queue
+String frontElement = queue.peek(); // Peek at the front element of the queue
+String removedElement = queue.poll(); // Remove the front element of the queue
+boolean isEmpty = queue.isEmpty(); // Check if the queue is empty
+int queueSize = queue.size(); // Get the size of the queue
+
+// traversing elements
+Iterator<String> itr=queue.iterator();
+while(itr.hasNext()){
+    System.out.println(itr.next());
+}
+
+//Traversing list through for-each loop
+for(String fruit:queue)    
+    System.out.println(fruit);
+     
+List<int[]> res = new ArrayList<>();
+res.add(new int[]{1,2});
+res.toArray(new int[res.size()][]); // converting list to array
+
+List<List<Integer>> res = new ArrayList<>();
+List<Integer> list1 = new ArrayList<>();
+List<Integer> list2 = new ArrayList<>(list1); // copying list1 to list2
+
+// min heap with custom comparator // ListNode is a class with val and next as attributes
+PriorityQueue<ListNode> pq =
+        new PriorityQueue<>(new Comparator<ListNode>()
+{
+    public int compare(ListNode a, ListNode b)
+    {
+        return a.val - b.val;
+    }
+});
